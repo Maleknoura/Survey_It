@@ -18,8 +18,7 @@ public class Question {
     private Long id;
 
     private String text;
-
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     private QuestionType type;
     private int answerCount;
 

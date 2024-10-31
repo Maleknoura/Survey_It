@@ -17,10 +17,10 @@ public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
     private List<Survey> surveys;
 
 }

@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: Survey-It
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Survey_IT
+    username: postgres
+    password: administrateur
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    open-in-view: false
+  validation:
+    message-bundle: messages
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    org.springframework: INFO
+  file:
+    name: logs/application.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
