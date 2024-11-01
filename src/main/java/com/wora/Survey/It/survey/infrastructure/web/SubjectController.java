@@ -4,6 +4,7 @@ import com.wora.Survey.It.common.GenericService;
 import com.wora.Survey.It.common.Validation.Exists;
 import com.wora.Survey.It.survey.application.dto.request.SubSubjectRequestDto;
 import com.wora.Survey.It.survey.application.dto.request.SubjectRequestdto;
+import com.wora.Survey.It.survey.application.dto.response.SubSubjectResponseDto;
 import com.wora.Survey.It.survey.application.dto.response.SubjectResponseDto;
 import com.wora.Survey.It.survey.application.service.SubjectServiceImpl;
 import jakarta.validation.Valid;
@@ -31,12 +32,13 @@ public class SubjectController {
         SubjectResponseDto response = subjectService.save(updatedRequestDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
-    @PostMapping("/{subjectId}/subsubjects")
-    public ResponseEntity<SubjectResponseDto> addSubSubject(
+    @PostMapping("/{subjectId}/subsubject")
+    public ResponseEntity<SubSubjectResponseDto> addSubSubject(
             @PathVariable Long subjectId,
-            @RequestBody SubSubjectRequestDto dto) {
-        SubjectResponseDto responseDto = subjectService.addSubSubject(subjectId, dto);
-        return new ResponseEntity<>(responseDto, HttpStatus.CREATED);
+            @RequestBody SubSubjectRequestDto requestDto
+    ) {
+        SubSubjectResponseDto responseDto = subjectService.addSubSubject(subjectId, requestDto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(responseDto);
     }
 
 }

@@ -4,8 +4,9 @@ import com.wora.Survey.It.common.GenericService;
 import com.wora.Survey.It.common.Validation.Exists;
 import com.wora.Survey.It.survey.application.dto.request.SubSubjectRequestDto;
 import com.wora.Survey.It.survey.application.dto.request.SubjectRequestdto;
+import com.wora.Survey.It.survey.application.dto.response.SubSubjectResponseDto;
 import com.wora.Survey.It.survey.application.dto.response.SubjectResponseDto;
-import com.wora.Survey.It.survey.application.mapper.SubSubjectMapper;
+
 import com.wora.Survey.It.survey.application.mapper.SubjectMapper;
 import com.wora.Survey.It.survey.domain.entity.Subject;
 import com.wora.Survey.It.survey.domain.entity.SurveyEdition;
@@ -26,8 +27,7 @@ public class SubjectServiceImpl implements GenericService<SubjectRequestdto, Sub
     SubjectRepository subjectRepository;
     @Autowired
     SubjectMapper subjectMapper;
-    @Autowired
-    SubSubjectMapper subSubjectMapper;
+
     @Autowired
     SurveyEditionRepository surveyEditionRepository;
 
@@ -62,19 +62,16 @@ public class SubjectServiceImpl implements GenericService<SubjectRequestdto, Sub
     public void deleteById(Long aLong) {
 
     }
-    public SubjectResponseDto addSubSubject(Long subjectId, SubSubjectRequestDto dto) {
-        Subject parentSubject = subjectRepository.findById(subjectId)
-                .orElseThrow(() -> new RuntimeException("Subject not found"));
 
-        Subject subSubject = new Subject();
-        subSubject.setTitle(dto.title());
-        subSubject.setParentSubject(parentSubject);
+public SubSubjectResponseDto addSubSubject(Long parentSubjectId, SubSubjectRequestDto requestDto) {
+    Subject parentSubject = subjectRepository.findById(parentSubjectId)
+            .orElseThrow(() -> new EntityNotFoundException("Subject not found"));
 
-        parentSubject.getSubSubjects().add(subSubject);
-        subjectRepository.save(parentSubject);
+    Subject subSubject = subjectMapper.toSubSubjectEntity(requestDto);
+    subSubject.setParentSubject(parentSubject);
+    subSubject.setSurveyEdition(parentSubject.getSurveyEdition());
 
-        return subSubjectMapper.toSubjectResponseDto(subSubject);
-    }
-
-
+    Subject savedSubSubject = subjectRepository.save(subSubject);
+    return subjectMapper.toSubSubjectDto(savedSubSubject);
+}
 }
