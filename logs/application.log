@@ -7997,3 +7997,48 @@ java.lang.NoSuchMethodError: 'void com.wora.Survey.It.survey.application.dto.res
 2024-11-01 15:12:09 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-01 15:12:09 - HikariPool-1 - Shutdown initiated...
 2024-11-01 15:12:09 - HikariPool-1 - Shutdown completed.
+2024-11-01 15:12:39 - Starting SurveyItApplication using Java 21.0.5 with PID 8384 (C:\Users\YCode\Desktop\Survey-It\target\classes started by YCode in C:\Users\YCode\Desktop\Survey-It)
+2024-11-01 15:12:39 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 15:12:40 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-01 15:12:40 - Finished Spring Data repository scanning in 79 ms. Found 6 JPA repository interfaces.
+2024-11-01 15:12:40 - Tomcat initialized with port 8080 (http)
+2024-11-01 15:12:40 - Starting service [Tomcat]
+2024-11-01 15:12:40 - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-01 15:12:40 - Initializing Spring embedded WebApplicationContext
+2024-11-01 15:12:40 - Root WebApplicationContext: initialization completed in 1253 ms
+2024-11-01 15:12:40 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-01 15:12:40 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-01 15:12:40 - HHH000026: Second-level cache disabled
+2024-11-01 15:12:41 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-01 15:12:41 - HikariPool-1 - Starting...
+2024-11-01 15:12:41 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b60d324
+2024-11-01 15:12:41 - HikariPool-1 - Start completed.
+2024-11-01 15:12:41 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-01 15:12:42 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-01 15:12:42 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 15:12:43 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-01 15:12:43 - Started SurveyItApplication in 4.253 seconds (process running for 4.835)
+2024-11-01 15:12:50 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 15:12:50 - Initializing Servlet 'dispatcherServlet'
+2024-11-01 15:12:50 - Completed initialization in 2 ms
+2024-11-01 15:27:41 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 15:27:41 - HikariPool-1 - Shutdown initiated...
+2024-11-01 15:27:41 - HikariPool-1 - Shutdown completed.
+2024-11-01 15:28:40 - Starting SurveyItApplicationTests using Java 21.0.5 with PID 19212 (started by YCode in C:\Users\YCode\Desktop\Survey-It)
+2024-11-01 15:28:40 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 15:28:41 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-01 15:28:41 - Finished Spring Data repository scanning in 84 ms. Found 6 JPA repository interfaces.
+2024-11-01 15:28:42 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-01 15:28:42 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-01 15:28:42 - HHH000026: Second-level cache disabled
+2024-11-01 15:28:43 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-01 15:28:43 - HikariPool-1 - Starting...
+2024-11-01 15:28:43 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a122e68
+2024-11-01 15:28:43 - HikariPool-1 - Start completed.
+2024-11-01 15:28:43 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-01 15:28:44 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-01 15:28:44 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 15:28:46 - Started SurveyItApplicationTests in 5.744 seconds (process running for 6.997)
+2024-11-01 15:28:46 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 15:28:46 - HikariPool-1 - Shutdown initiated...
+2024-11-01 15:28:46 - HikariPool-1 - Shutdown completed.
