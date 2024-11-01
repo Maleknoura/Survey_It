@@ -7604,3 +7604,171 @@ java.lang.StackOverflowError: null
 2024-11-01 11:10:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-01 11:10:26 - HikariPool-1 - Shutdown initiated...
 2024-11-01 11:10:26 - HikariPool-1 - Shutdown completed.
+2024-11-01 11:10:31 - Starting SurveyItApplication using Java 21.0.5 with PID 33660 (C:\Users\YCode\Desktop\Survey-It\target\classes started by YCode in C:\Users\YCode\Desktop\Survey-It)
+2024-11-01 11:10:31 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 11:10:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-01 11:10:32 - Finished Spring Data repository scanning in 150 ms. Found 6 JPA repository interfaces.
+2024-11-01 11:10:32 - Tomcat initialized with port 8080 (http)
+2024-11-01 11:10:32 - Starting service [Tomcat]
+2024-11-01 11:10:32 - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-01 11:10:32 - Initializing Spring embedded WebApplicationContext
+2024-11-01 11:10:32 - Root WebApplicationContext: initialization completed in 1332 ms
+2024-11-01 11:10:32 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-01 11:10:32 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-01 11:10:32 - HHH000026: Second-level cache disabled
+2024-11-01 11:10:33 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-01 11:10:33 - HikariPool-1 - Starting...
+2024-11-01 11:10:33 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@517a46f3
+2024-11-01 11:10:33 - HikariPool-1 - Start completed.
+2024-11-01 11:10:33 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-01 11:10:34 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-01 11:10:34 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:10:35 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-01 11:10:35 - Started SurveyItApplication in 4.206 seconds (process running for 4.772)
+2024-11-01 11:44:42 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:44:42 - HikariPool-1 - Shutdown initiated...
+2024-11-01 11:44:42 - HikariPool-1 - Shutdown completed.
+2024-11-01 11:44:53 - Starting SurveyItApplicationTests using Java 21.0.5 with PID 6068 (started by YCode in C:\Users\YCode\Desktop\Survey-It)
+2024-11-01 11:44:53 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 11:44:54 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-01 11:44:54 - Finished Spring Data repository scanning in 95 ms. Found 6 JPA repository interfaces.
+2024-11-01 11:44:54 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-01 11:44:54 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-01 11:44:54 - HHH000026: Second-level cache disabled
+2024-11-01 11:44:55 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-01 11:44:55 - HikariPool-1 - Starting...
+2024-11-01 11:44:55 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41be8db9
+2024-11-01 11:44:55 - HikariPool-1 - Start completed.
+2024-11-01 11:44:55 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-01 11:44:56 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-01 11:44:56 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:44:57 - Started SurveyItApplicationTests in 4.864 seconds (process running for 5.897)
+2024-11-01 11:44:58 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:44:58 - HikariPool-1 - Shutdown initiated...
+2024-11-01 11:44:58 - HikariPool-1 - Shutdown completed.
+2024-11-01 11:45:10 - Starting SurveyItApplication using Java 21.0.5 with PID 20280 (C:\Users\YCode\Desktop\Survey-It\target\classes started by YCode in C:\Users\YCode\Desktop\Survey-It)
+2024-11-01 11:45:10 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 11:45:11 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-01 11:45:11 - Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
+2024-11-01 11:45:11 - Tomcat initialized with port 8080 (http)
+2024-11-01 11:45:11 - Starting service [Tomcat]
+2024-11-01 11:45:11 - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-01 11:45:12 - Initializing Spring embedded WebApplicationContext
+2024-11-01 11:45:12 - Root WebApplicationContext: initialization completed in 1066 ms
+2024-11-01 11:45:12 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-01 11:45:12 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-01 11:45:12 - HHH000026: Second-level cache disabled
+2024-11-01 11:45:12 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-01 11:45:12 - HikariPool-1 - Starting...
+2024-11-01 11:45:12 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@18483b8b
+2024-11-01 11:45:12 - HikariPool-1 - Start completed.
+2024-11-01 11:45:12 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-01 11:45:13 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-01 11:45:13 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:45:14 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-01 11:45:14 - Started SurveyItApplication in 3.829 seconds (process running for 4.339)
+2024-11-01 11:45:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:45:26 - HikariPool-1 - Shutdown initiated...
+2024-11-01 11:45:26 - HikariPool-1 - Shutdown completed.
+2024-11-01 11:52:32 - Starting SurveyItApplication using Java 21.0.5 with PID 17424 (C:\Users\YCode\Desktop\Survey-It\target\classes started by YCode in C:\Users\YCode\Desktop\Survey-It)
+2024-11-01 11:52:32 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 11:52:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-01 11:52:32 - Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
+2024-11-01 11:52:33 - Tomcat initialized with port 8080 (http)
+2024-11-01 11:52:33 - Starting service [Tomcat]
+2024-11-01 11:52:33 - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-01 11:52:33 - Initializing Spring embedded WebApplicationContext
+2024-11-01 11:52:33 - Root WebApplicationContext: initialization completed in 1118 ms
+2024-11-01 11:52:33 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-01 11:52:33 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-01 11:52:33 - HHH000026: Second-level cache disabled
+2024-11-01 11:52:33 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-01 11:52:33 - HikariPool-1 - Starting...
+2024-11-01 11:52:34 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7db47323
+2024-11-01 11:52:34 - HikariPool-1 - Start completed.
+2024-11-01 11:52:34 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-01 11:52:34 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-01 11:52:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:52:35 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-01 11:52:35 - Started SurveyItApplication in 3.875 seconds (process running for 4.4)
+2024-11-01 11:53:21 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 11:53:21 - Initializing Servlet 'dispatcherServlet'
+2024-11-01 11:53:21 - Completed initialization in 0 ms
+2024-11-01 11:54:00 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.wora.Survey.It.survey.domain.entity.Subject.subSubjects: could not initialize proxy - no Session] with root cause
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.wora.Survey.It.survey.domain.entity.Subject.subSubjects: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:636)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:219)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.write(AbstractPersistentCollection.java:445)
+	at org.hibernate.collection.spi.PersistentBag.add(PersistentBag.java:388)
+	at com.wora.Survey.It.survey.application.service.SubjectServiceImpl.addSubSubject(SubjectServiceImpl.java:73)
+	at com.wora.Survey.It.survey.infrastructure.web.SubjectController.addSubSubject(SubjectController.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-11-01 11:55:45 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:55:45 - HikariPool-1 - Shutdown initiated...
+2024-11-01 11:55:45 - HikariPool-1 - Shutdown completed.
+2024-11-01 11:55:57 - Starting SurveyItApplicationTests using Java 21.0.5 with PID 17420 (started by YCode in C:\Users\YCode\Desktop\Survey-It)
+2024-11-01 11:55:57 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 11:55:58 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-01 11:55:59 - Finished Spring Data repository scanning in 94 ms. Found 6 JPA repository interfaces.
+2024-11-01 11:55:59 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-01 11:55:59 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-01 11:55:59 - HHH000026: Second-level cache disabled
+2024-11-01 11:56:00 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-01 11:56:00 - HikariPool-1 - Starting...
+2024-11-01 11:56:00 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41be8db9
+2024-11-01 11:56:00 - HikariPool-1 - Start completed.
+2024-11-01 11:56:00 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-01 11:56:01 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-01 11:56:01 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:56:02 - Started SurveyItApplicationTests in 5.297 seconds (process running for 6.288)
+2024-11-01 11:56:03 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-01 11:56:03 - HikariPool-1 - Shutdown initiated...
+2024-11-01 11:56:03 - HikariPool-1 - Shutdown completed.

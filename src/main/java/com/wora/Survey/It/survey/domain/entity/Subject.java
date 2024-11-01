@@ -26,12 +26,12 @@ public class Subject {
     @JoinColumn(name = "survey_edition_id")
     private SurveyEdition surveyEdition;
 
-    @OneToMany(mappedBy = "parentSubject", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Subject> subSubjects = new ArrayList<>();
-
     @ManyToOne
     @JoinColumn(name = "parent_subject_id")
     private Subject parentSubject;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "parentSubject")
+    private List<Subject> subSubjects = new ArrayList<>();
 
 }
 
