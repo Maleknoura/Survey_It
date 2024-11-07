@@ -1,6 +1,8 @@
 package com.wora.Survey.It.survey.application.mapper;
 
 import com.wora.Survey.It.survey.application.dto.request.AnswerRequestDto;
+import com.wora.Survey.It.survey.application.dto.request.CreateAnswerDto;
+import com.wora.Survey.It.survey.application.dto.response.AnswerDto;
 import com.wora.Survey.It.survey.application.dto.response.AnswerResponseDto;
 import com.wora.Survey.It.survey.domain.entity.Answer;
 import org.mapstruct.Mapper;
@@ -14,7 +16,11 @@ public interface AnswerMapper {
 
     Answer toEntity(AnswerRequestDto dto);
 
-    AnswerResponseDto toDto(Answer entity);
+    AnswerResponseDto toAnswerResponseDto(Answer entity);
 
-    void updateEntityFromDto(AnswerRequestDto dto, @MappingTarget Answer existingAnswer);
+    Answer toEntity(CreateAnswerDto dto);
+
+    AnswerDto toAnswerDto(Answer entity);
+
+    void updateEntityFromDto(CreateAnswerDto dto, @MappingTarget Answer existingAnswer);
 }

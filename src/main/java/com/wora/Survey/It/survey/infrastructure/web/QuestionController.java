@@ -18,7 +18,7 @@ public class QuestionController {
 
     public QuestionController(QuestionServiceImpl questionService) {
         this.questionService = questionService;
-    }
+    } 
 
     @PostMapping
     public ResponseEntity<QuestionResponseDto> createQuestion(

@@ -5,7 +5,8 @@ import lombok.*;
 
 @Entity
 @NoArgsConstructor
-
+@Getter
+@Setter
 public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +15,6 @@ public class Answer {
     private String text;
 
     private int selectionCount;
-
 
     @ManyToOne
     @JoinColumn(name = "question_id", nullable = false)
