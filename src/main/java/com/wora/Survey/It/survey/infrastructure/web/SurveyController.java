@@ -1,5 +1,6 @@
 package com.wora.Survey.It.survey.infrastructure.web;
 
+import com.wora.Survey.It.survey.application.dto.request.AnswerRequestDto;
 import com.wora.Survey.It.survey.application.mapper.SurveyMapper;
 import com.wora.Survey.It.survey.application.service.SurveyServiceImpl;
 import com.wora.Survey.It.survey.application.dto.request.SurveyRequestDto;
@@ -23,7 +24,6 @@ public class SurveyController {
     public SurveyController(SurveyMapper surveyMapper, SurveyServiceImpl surveyService) {
         this.surveyMapper = surveyMapper;
         this.surveyService = surveyService;
-        System.out.println("this component is initialezed");
     }
 
     @PostMapping
@@ -59,4 +59,17 @@ public class SurveyController {
         surveyService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+    @PostMapping("/surveys/{surveyId}/participate")
+    public ResponseEntity<String> participateInSurvey(@PathVariable Long surveyId,
+                                                      @RequestBody AnswerRequestDto participationDto) {
+        try {
+            surveyService.saveParticipation(surveyId, participationDto);
+            return ResponseEntity.ok("Participation saved successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error saving participation: " + e.getMessage());
+        }
+    }
+
+
+
 }

@@ -3,17 +3,18 @@ package com.wora.Survey.It.survey.application.service;
 import com.wora.Survey.It.common.GenericService;
 import com.wora.Survey.It.owner.domain.entity.Owner;
 import com.wora.Survey.It.owner.domain.repository.OwnerRepository;
+import com.wora.Survey.It.survey.application.dto.request.AnswerRequestDto;
+import com.wora.Survey.It.survey.application.dto.response.AnswerDto;
+import com.wora.Survey.It.survey.application.dto.response.ResponseDto;
 import com.wora.Survey.It.survey.application.mapper.SurveyMapper;
-import com.wora.Survey.It.survey.domain.entity.Subject;
-import com.wora.Survey.It.survey.domain.entity.SurveyEdition;
-import com.wora.Survey.It.survey.domain.repository.SubjectRepository;
-import com.wora.Survey.It.survey.domain.repository.SurveyEditionRepository;
-import com.wora.Survey.It.survey.domain.repository.SurveyRepository;
+import com.wora.Survey.It.survey.domain.entity.*;
+import com.wora.Survey.It.survey.domain.enums.QuestionType;
+import com.wora.Survey.It.survey.domain.repository.*;
 import com.wora.Survey.It.survey.application.dto.request.SurveyRequestDto;
 import com.wora.Survey.It.survey.application.dto.response.SurveyResponseDto;
-import com.wora.Survey.It.survey.domain.entity.Survey;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
@@ -26,22 +27,15 @@ import java.util.stream.Collectors;
 
 @Service
 @Validated
+@AllArgsConstructor
 public class SurveyServiceImpl implements GenericService<SurveyRequestDto, SurveyResponseDto, Long> {
 
-   private final SurveyRepository surveyRepository;
-   private final SurveyMapper surveyMapper;
-   private final OwnerRepository ownerRepository;
+    private final SurveyRepository surveyRepository;
+    private final SurveyMapper surveyMapper;
+    private final OwnerRepository ownerRepository;
+    private final AnswerRepository answerRepository;
+    private  final QuestionRepository questionRepository;
 
-
-
-    @Autowired
-    public SurveyServiceImpl(SurveyRepository surveyRepository, SurveyMapper surveyMapper, OwnerRepository ownerRepository)
-                             {
-        this.surveyRepository=surveyRepository;
-        this.surveyMapper=surveyMapper;
-        this.ownerRepository=ownerRepository;
-
-    }
 
     @Override
 
@@ -68,8 +62,8 @@ public class SurveyServiceImpl implements GenericService<SurveyRequestDto, Surve
 
     @Override
     public Optional<SurveyResponseDto> findById(Long id) {
-    return surveyRepository.findById(id)
-        .map(surveyMapper::toDto);
+        return surveyRepository.findById(id)
+                .map(surveyMapper::toDto);
     }
 
     @Override
@@ -88,6 +82,7 @@ public class SurveyServiceImpl implements GenericService<SurveyRequestDto, Surve
 
         return surveyMapper.toDto(updatedSurvey);
     }
+
     @Transactional
     public boolean existsById(Long id) {
         return surveyRepository.existsById(id);
@@ -102,5 +97,39 @@ public class SurveyServiceImpl implements GenericService<SurveyRequestDto, Surve
         surveyRepository.deleteById(id);
     }
 
+    @Transactional
+    public void saveParticipation(Long surveyId, AnswerRequestDto participationDto) {
 
+        Survey survey = surveyRepository.findById(surveyId)
+                .orElseThrow(() -> new EntityNotFoundException("Survey with ID " + surveyId + " not found"));
+
+        for (ResponseDto response : participationDto.responses()) {
+
+            Question question = questionRepository.findById(response.questionId())
+                    .orElseThrow(() -> new EntityNotFoundException("Question with ID " + response.questionId() + " not found"));
+
+            if (question.getType() == QuestionType.SINGLE_CHOICE && response.answerId() != null) {
+                Answer answer = answerRepository.findById(Long.valueOf(response.answerId()))
+                        .orElseThrow(() -> new EntityNotFoundException("Answer with ID " + response.answerId() + " not found"));
+
+                answer.incrementSelectionCount();
+                answerRepository.save(answer);
+
+            } else if (question.getType() == QuestionType.MULTIPLE_CHOICE && response.answers() != null) {
+                for (AnswerDto answerDto : response.answers()) {
+                    Answer answer = answerRepository.findById(Long.valueOf(answerDto.answerId()))
+                            .orElseThrow(() -> new EntityNotFoundException("Answer with ID " + answerDto.answerId() + " not found"));
+
+                    answer.incrementSelectionCount();
+                    System.out.println("Selection Count after increment: " + answer.getSelectionCount());
+
+                    answerRepository.save(answer);
+                }
+            }
+
+            question.incrementAnswerCount();
+            questionRepository.save(question);
+        }
+
+    }
 }
