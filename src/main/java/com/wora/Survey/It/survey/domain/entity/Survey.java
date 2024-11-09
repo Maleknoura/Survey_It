@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -25,10 +26,12 @@ public class Survey {
     private Owner owner;
 
 
-    @OneToMany(mappedBy = "survey", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "survey", cascade = CascadeType.ALL ,fetch = FetchType.EAGER)
     private List<SurveyEdition> editions;
 
 
-
+    public List<SurveyEdition> getSurveyEditions() {
+        return editions;
+    }
 }
 

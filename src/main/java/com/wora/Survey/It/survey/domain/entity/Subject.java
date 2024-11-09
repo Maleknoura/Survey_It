@@ -33,6 +33,9 @@ public class Subject {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "parentSubject")
     private List<Subject> subSubjects = new ArrayList<>();
 
+    @OneToMany(fetch = FetchType.EAGER)
+    private List<Question> questions;
+
 }
 
 

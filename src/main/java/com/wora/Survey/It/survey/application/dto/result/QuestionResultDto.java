@@ -7,8 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public record QuestionResultDto(
-        String question,
-        List<NestedAnswerDto> answers
-
+        String text, Map<String, Integer> answers, int totalAnswers
 ) {
+
 }
