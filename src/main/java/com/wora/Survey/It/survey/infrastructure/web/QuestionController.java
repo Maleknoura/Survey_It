@@ -4,6 +4,7 @@ import com.wora.Survey.It.survey.application.dto.request.QuestionRequestDto;
 import com.wora.Survey.It.survey.application.dto.response.QuestionResponseDto;
 import com.wora.Survey.It.survey.application.service.QuestionServiceImpl;
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,12 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/subchapters/{subChapterId}/questions ")
+@AllArgsConstructor
 public class QuestionController {
     private final QuestionServiceImpl questionService;
 
-    public QuestionController(QuestionServiceImpl questionService) {
-        this.questionService = questionService;
-    } 
 
     @PostMapping
     public ResponseEntity<QuestionResponseDto> createQuestion(

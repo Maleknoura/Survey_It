@@ -6,6 +6,7 @@ import com.wora.Survey.It.survey.application.service.SurveyServiceImpl;
 import com.wora.Survey.It.survey.application.dto.request.SurveyRequestDto;
 import com.wora.Survey.It.survey.application.dto.response.SurveyResponseDto;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,16 +16,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/v1/survey")
+@RequiredArgsConstructor
 public class SurveyController {
 
     private final SurveyServiceImpl surveyService;
     private final SurveyMapper surveyMapper;
 
-    @Autowired
-    public SurveyController(SurveyMapper surveyMapper, SurveyServiceImpl surveyService) {
-        this.surveyMapper = surveyMapper;
-        this.surveyService = surveyService;
-    }
 
     @PostMapping
     public ResponseEntity<SurveyResponseDto> createSurvey(@RequestBody @Valid SurveyRequestDto surveyRequestDto) {

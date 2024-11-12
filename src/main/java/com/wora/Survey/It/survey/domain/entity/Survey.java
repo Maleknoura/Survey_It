@@ -29,6 +29,9 @@ public class Survey {
     @OneToMany(mappedBy = "survey", cascade = CascadeType.ALL ,fetch = FetchType.EAGER)
     private List<SurveyEdition> editions;
 
+    public Survey(long l, String surveyTitle, long l1) {
+    }
+
 
     public List<SurveyEdition> getSurveyEditions() {
         return editions;

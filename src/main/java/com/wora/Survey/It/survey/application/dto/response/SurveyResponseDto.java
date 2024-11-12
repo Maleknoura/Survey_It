@@ -6,7 +6,9 @@ public record SurveyResponseDto(
         Long id,
         String title,
         String description,
-        Boolean status,
-        OwnerNestedDto owner
+        Boolean status
 ) {
+
+
+
 }

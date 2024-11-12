@@ -13,23 +13,20 @@ import com.wora.Survey.It.survey.domain.entity.SurveyEdition;
 import com.wora.Survey.It.survey.domain.repository.SubjectRepository;
 import com.wora.Survey.It.survey.domain.repository.SurveyEditionRepository;
 import jakarta.persistence.EntityNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class SubjectServiceImpl implements GenericService<SubjectRequestdto, SubjectResponseDto, Long> {
 
-    @Autowired
-    SubjectRepository subjectRepository;
-    @Autowired
-    SubjectMapper subjectMapper;
 
-    @Autowired
-    SurveyEditionRepository surveyEditionRepository;
+    private final SubjectRepository subjectRepository;
+    private final SubjectMapper subjectMapper;
+   private final SurveyEditionRepository surveyEditionRepository;
 
     @Override
     public SubjectResponseDto save(SubjectRequestdto requestDto) {
@@ -37,7 +34,7 @@ public class SubjectServiceImpl implements GenericService<SubjectRequestdto, Sub
                 .orElseThrow(() -> new EntityNotFoundException("SurveyEdition not found with id: " + requestDto.getSurveyEditionId()));
 
         Subject subject = subjectMapper.toEntity(requestDto);
-        subject.setSurveyEdition(surveyEdition);
+        subject.setEditions(surveyEdition);
 
         Subject savedSubject = subjectRepository.save(subject);
         return subjectMapper.toDto(savedSubject);
@@ -69,7 +66,7 @@ public SubSubjectResponseDto addSubSubject(Long parentSubjectId, SubSubjectReque
 
     Subject subSubject = subjectMapper.toSubSubjectEntity(requestDto);
     subSubject.setParentSubject(parentSubject);
-    subSubject.setSurveyEdition(parentSubject.getSurveyEdition());
+    subSubject.setEditions(parentSubject.getEditions());
 
     Subject savedSubSubject = subjectRepository.save(subSubject);
     return subjectMapper.toSubSubjectDto(savedSubSubject);

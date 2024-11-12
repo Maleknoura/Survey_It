@@ -13,11 +13,15 @@ import org.mapstruct.factory.Mappers;
 public interface QuestionMapper {
     QuestionMapper Instance = Mappers.getMapper(QuestionMapper.class);
 
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "subject", ignore = true)
+
     Question toEntity(QuestionRequestDto requestDto);
 
+    @Mapping(target = "id", source = "question.id")
+    @Mapping(target = "subject", source = "question.subject")
+    @Mapping(target = "answerCount", source = "question.answerCount")
+    @Mapping(target = "answers", source = "question.answers")
     QuestionResponseDto toDto(Question question);
 
+    @Mapping(target = "answers", source = "dto.responses")
     void updateEntityFromDto(AnswerRequestDto dto, @MappingTarget Question existingQuestion);
 }

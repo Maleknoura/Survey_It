@@ -6,6 +6,7 @@ import com.wora.Survey.It.survey.application.service.AnswerServiceImpl;
 import com.wora.Survey.It.survey.application.dto.request.AnswerRequestDto;
 import com.wora.Survey.It.survey.application.dto.response.AnswerResponseDto;
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +16,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/surveys/{surveyId}/survey-editions/{surveyEditionId}/subjects/{subjectId}/subsubjects/{subSubjectId}/questions/{questionId}")
+@AllArgsConstructor
 public class AnswerController {
 
-    @Autowired
-    private AnswerServiceImpl answerService;
+
+    private final AnswerServiceImpl answerService;
 
     @PostMapping
     public ResponseEntity<AnswerResponseDto> createAnswer(@RequestBody @Valid CreateAnswerDto createAnswerDto) {

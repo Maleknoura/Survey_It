@@ -26,10 +26,13 @@ public class SurveyEdition {
     @JoinColumn(name = "survey_id")
     private Survey survey;
 
-    @OneToMany(mappedBy = "surveyEdition", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "editions", fetch = FetchType.EAGER)
     private List<Subject> subjects;
 
 
+    public SurveyEdition(long l, String surveyEdition) {
+
+    }
 }
 
 

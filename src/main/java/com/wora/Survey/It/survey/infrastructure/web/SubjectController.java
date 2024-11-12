@@ -18,12 +18,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/surveys")
 @RequiredArgsConstructor
 public class SubjectController {
-    @Autowired
-    private SubjectServiceImpl subjectService;
+
+    private final SubjectServiceImpl subjectService;
+
     @PostMapping("/{surveyEditionId}/chapters")
     public ResponseEntity<SubjectResponseDto> createChapter(
             @PathVariable Long surveyEditionId,
-             @RequestBody SubjectRequestdto requestDto) {
+            @Valid @RequestBody SubjectRequestdto requestDto) {
         SubjectRequestdto updatedRequestDto = new SubjectRequestdto(
                 requestDto.title(),
                 surveyEditionId,
@@ -32,10 +33,11 @@ public class SubjectController {
         SubjectResponseDto response = subjectService.save(updatedRequestDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
+
     @PostMapping("/{subjectId}/subsubject")
     public ResponseEntity<SubSubjectResponseDto> addSubSubject(
             @PathVariable Long subjectId,
-            @RequestBody SubSubjectRequestDto requestDto
+            @Valid @RequestBody SubSubjectRequestDto requestDto
     ) {
         SubSubjectResponseDto responseDto = subjectService.addSubSubject(subjectId, requestDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(responseDto);

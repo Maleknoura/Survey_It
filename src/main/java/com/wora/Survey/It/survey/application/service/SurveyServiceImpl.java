@@ -15,6 +15,7 @@ import com.wora.Survey.It.survey.application.dto.response.SurveyResponseDto;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
@@ -27,7 +28,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Validated
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class SurveyServiceImpl implements GenericService<SurveyRequestDto, SurveyResponseDto, Long> {
 
     private final SurveyRepository surveyRepository;

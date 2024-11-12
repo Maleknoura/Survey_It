@@ -9,6 +9,8 @@ import com.wora.Survey.It.survey.domain.entity.Subject;
 import com.wora.Survey.It.survey.domain.repository.QuestionRepository;
 import com.wora.Survey.It.survey.domain.repository.SubjectRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,21 +19,12 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class QuestionServiceImpl implements GenericService<QuestionRequestDto, QuestionResponseDto, Long> {
 
     private final QuestionRepository questionRepository;
     private final QuestionMapper questionMapper;
     private final SubjectRepository subjectRepository;
-
-    public QuestionServiceImpl(
-            QuestionRepository questionRepository,
-            QuestionMapper questionMapper,
-            SubjectRepository subjectRepository
-    ) {
-        this.questionRepository = questionRepository;
-        this.questionMapper = questionMapper;
-        this.subjectRepository = subjectRepository;
-    }
 
 
     @Override

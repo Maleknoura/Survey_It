@@ -12,4 +12,5 @@ public record SubjectResponseDto(
         SurveyEdNestedDto surveyEdition,
         List<SubjectNestedDto> subSubjects
 ) {
+
 }

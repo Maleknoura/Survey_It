@@ -23,5 +23,8 @@ public class Owner {
     @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
     private List<Survey> surveys;
 
+    public Owner(long l, String ownerName) {
+
+    }
 }
 

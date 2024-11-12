@@ -27,6 +27,13 @@ public class Question {
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
     private List<Answer> answers;
 
+    public Question(long l, String simpleQuestion) {
+
+    }
+
+    public Question(long l, String testQuestion, Subject subject) {
+
+    }
 
 
     public void incrementAnswerCount() {

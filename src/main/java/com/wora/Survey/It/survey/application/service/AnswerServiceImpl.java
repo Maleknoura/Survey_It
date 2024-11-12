@@ -11,6 +11,8 @@ import com.wora.Survey.It.survey.domain.entity.Question;
 import com.wora.Survey.It.survey.domain.repository.AnswerRepository;
 import com.wora.Survey.It.survey.domain.repository.QuestionRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -24,20 +26,16 @@ import java.util.stream.Collectors;
 
 @Service
 @Validated
+@RequiredArgsConstructor
 public class AnswerServiceImpl implements GenericService<CreateAnswerDto, AnswerResponseDto, Long> {
 
-    @Autowired
-    private AnswerRepository answerRepository;
-    private final AnswerMapper answerMapper;
-    @Autowired
-    private QuestionServiceImpl questionServiceImpl;
-    @Autowired
-    private QuestionRepository questionRepository;
 
-    @Autowired
-    public AnswerServiceImpl(AnswerMapper answerMapper) {
-        this.answerMapper = answerMapper;
-    }
+    private final AnswerRepository answerRepository;
+    private final AnswerMapper answerMapper;
+    private final QuestionServiceImpl questionServiceImpl;
+    private final QuestionRepository questionRepository;
+
+
 
     @Override
     public AnswerResponseDto save(CreateAnswerDto answerRequestDto) {

@@ -1,12 +1,11 @@
 package com.wora.Survey.It.survey.application.dto.nested;
 
 import com.wora.Survey.It.survey.domain.enums.QuestionType;
-import com.wora.Survey.It.survey.application.dto.response.SubjectResponseDto;
 
-public record NestedQuestionDto(
+public record NestedResponseDto(
         Long id,
-        String text
-
+        String text,
+        QuestionType type,
+        int answerCount
 ) {
-
 }

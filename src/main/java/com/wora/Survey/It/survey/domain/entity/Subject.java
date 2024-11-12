@@ -22,9 +22,8 @@ public class Subject {
     private String title;
 
     @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "survey_edition_id")
-    private SurveyEdition surveyEdition;
+    private SurveyEdition editions;
 
     @ManyToOne
     @JoinColumn(name = "parent_subject_id")
@@ -36,6 +35,13 @@ public class Subject {
     @OneToMany(fetch = FetchType.EAGER)
     private List<Question> questions;
 
+    public Subject(long l, String subjectName, SurveyEdition surveyEdition) {
+
+    }
+
+    public Subject(long l, String testSubject) {
+
+    }
 }
 
 

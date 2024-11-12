@@ -26,9 +26,6 @@ import java.util.*;
 public class SurveyResultController {
 
     private final SurveyResultService surveyService;
-    private final SurveyRepository surveyRepository;
-    private final SurveyResultMapper surveyResultMapper;
-
 
     @GetMapping("/{surveyId}/results")
     public ResponseEntity<SurveyResultsDto> getSurvey(@PathVariable Long surveyId) {
@@ -38,9 +35,8 @@ public class SurveyResultController {
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-
-
 }
+
 
 
 
