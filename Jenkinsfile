@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'Maven 3.8.1'
-        jdk 'JAVA 17'
+        jdk 'Java 17'
     }
     environment {
         DOCKER_REGISTRY = 'malekkn'
