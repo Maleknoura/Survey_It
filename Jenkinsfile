@@ -7,7 +7,7 @@ pipeline {
     }
     environment {
         DOCKER_REGISTRY = 'malekkn'
-        APP_NAME = 'Survey'
+        APP_NAME = 'survey'
         DOCKER_CREDENTIALS = credentials('docker-hub-credentials')
 
     }
