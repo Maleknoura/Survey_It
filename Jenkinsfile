@@ -3,11 +3,13 @@ pipeline {
     tools {
         maven 'Maven 3.8.1'
         jdk 'Java 17'
+        dockerTool 'Docker'
     }
     environment {
         DOCKER_REGISTRY = 'malekkn'
         APP_NAME = 'Survey'
         DOCKER_CREDENTIALS = credentials('docker-hub-credentials')
+
     }
     stages {
         stage('Checkout') {
