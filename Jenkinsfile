@@ -35,7 +35,7 @@ pipeline {
             steps {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'Malek Noura', passwordVariable: 'dockerhub098')]) {
-                        sh "echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} "
+
                         sh "docker login"
                         sh "docker push ${DOCKER_REGISTRY}/${APP_NAME}:${BUILD_NUMBER}"
                         sh "docker push ${DOCKER_REGISTRY}/${APP_NAME}:latest"
