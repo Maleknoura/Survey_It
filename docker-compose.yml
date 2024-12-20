@@ -40,7 +40,6 @@ services:
 
   jenkins:
     image: jenkins/jenkins:lts
-    container_name: my-jenkins
     ports:
       - "9090:8080"
       - "50000:50000"
